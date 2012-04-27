@@ -1,0 +1,449 @@
+@charset "utf8";
+
+/* Variable */
+@baseFont: "Microsoft Yahei", "Verdana";
+
+/* Image Source */
+@playImg: url("site-img/image_icon_play.png") no-repeat;
+@loginImg: url("site-img/login.jpg") center center no-repeat;
+@closeImg: url("site-img/WP7AppBarIcons.png") 0 -87px no-repeat;
+@deskbackImg: url("site-img/deskbg.png") center 0 no-repeat;
+
+/* Common */
+.absolute {
+    position: absolute;
+}
+.basefont {
+    font-family: @baseFont;
+}
+
+/* DOM */
+html {
+	background: @deskbackImg;
+    
+    body {
+        .absolute;
+        margin: 0;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        margin-left: 0px;
+    }
+}
+#loginPage {
+    .absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: "Segoe UI";
+    background: @loginImg;
+    z-index: 999999;
+    -webkit-transition: top 1s ease-out;
+    
+    &.slideUp {
+        top: -900px;
+    }
+    .week {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 220px;
+        left: 40px;
+        text-shadow: 2px 1px 1px rgba(0, 0, 0, .5);
+    }
+    .date {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 180px;
+        left: 40px;
+        text-shadow: 2px 1px 1px rgba(0, 0, 0, .5);
+    }
+    .time {
+        font-size: 104px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 60px;
+        left: 40px;
+        text-shadow: 2px 1px 1px rgba(0, 0, 0, .5);
+    }
+}
+#mainDesk {
+    .absolute;
+    top: 50%;
+    left: 0;
+    width: 20000px;
+    height: 630px;
+    display: none;
+    padding: 50px 0 50px 150px;
+    margin-top: -300px;
+    
+    .column {
+        float: left;
+        width: 500px;
+        height: 500px;
+        margin-right: 100px;
+    }
+}
+.app {
+    float: left;
+	margin: 0 5px 5px 0;
+	display: inline-block;
+    position: relative;
+    border-radius: 1px;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    
+    &:hover {
+        box-shadow: 0 0 10px rgba(76, 195, 255, 1);
+    }
+    &.bigger {
+        width: 245px;
+        height: 120px;
+    }
+    &.smaller {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* text */
+.text {
+    .basefont;
+    color: #fff;
+    overflow: hidden;
+    background: #0d8ccc;
+    
+    h2 {
+        cursor: default;
+        padding: 0 8px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    p {
+        height: 47px;
+        cursor: default;
+        padding: 0 8px 5px 8px;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+/* appInterfaceText */
+.appInterfaceText {
+    .basefont;
+    .absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    height: 85%;
+    z-index: 10;
+    overflow: auto;
+    background: #0d8ccc;
+    
+    .contain {
+        width: 600px;
+        height: auto;
+        margin: 50px auto;
+        
+        p {
+            text-indent: 34px;
+            
+            &:nth-child(2):first-letter {
+                font-size: 36px;
+            }
+        }
+    }
+}
+/* img */
+.img {
+    overflow: hidden;
+}
+/* appInterfaceImg */
+.appInterfaceImg {
+    .basefont;
+    .absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    height: 100%;
+    z-index: 10;
+    display: -moz-box;
+    display: -webkit-box;
+    overflow: auto;
+    background: #000;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    
+    .containImg {
+        width: 600px;
+        height: 100%;
+        display: -moz-box;
+        display: -webkit-box;
+        -moz-box-align: center;
+        -webkit-box-align: center;
+    }
+}
+/* music */
+.music {
+    overflow: hidden;
+    
+    &.bigger {
+        width: 245px;
+        height: 120px;
+        
+        a {
+            .absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            margin: 0 62px 0 63px;
+            cursor: default;
+            display: inline-block;
+            background: @playImg;
+            -webkit-transform: rotate(0deg);
+        }
+        .musicDetail {
+            width: 250px;
+        }
+    }
+    &.smaller {
+        width: 120px;
+        height: 120px;
+        
+        a {
+            .absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            cursor: default;
+            display: inline-block;
+            background: @playImg;
+            -webkit-transform: rotate(0deg);
+        }
+        .musicDetail {
+            width: 120px;
+        }
+    }
+    .musicDetail {
+        .absolute;
+        top: 120px;
+        left: 0;
+        color: #fff;
+        height: 120px;
+        z-index: 4;
+        overflow: hidden;
+        background: rgba(13, 140, 204, .4);
+        text-shadow: 0 0 4px #000;
+        
+        h2 {
+            .basefont;
+            cursor: default;
+            padding: 0 8px;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        p {
+            .basefont;
+            cursor: default;
+            height: 47px;
+            padding: 0 8px 5px 8px;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+/* musicPlayer */
+#musicPlayer {
+    left: -300px;
+    width: 300px;
+    bottom: 0;
+    position: fixed;
+}
+/* video */
+.video {
+    overflow: hidden;
+    
+    &.bigger {
+        width: 245px;
+        height: 120px;
+        
+        a {
+            .absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            margin: 0 62px 0 63px;
+            cursor: default;
+            display: inline-block;
+            z-index: 3;
+            background: @playImg;
+        }
+        .videoDetail {
+            width: 250px;
+        }
+    }
+    &.smaller {
+        width: 120px;
+        height: 120px;
+        
+        a {
+            .absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            cursor: default;
+            display: inline-block;
+            z-index: 3;
+            background: @playImg;
+            -webkit-transform: rotate(0deg);
+        }
+        .videoDetail {
+            width: 120px;
+        }
+    }
+    .videoDetail {
+        .absolute;
+        top: 120px;
+        left: 0;
+        color: #fff;
+        height: 120px;
+        z-index: 4;
+        overflow: hidden;
+        background: rgba(13, 140, 204, .4);
+        text-shadow: 0 0 4px #000;
+        
+        h2 {
+            .basefont;
+            cursor: default;
+            padding: 0 8px;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        p {
+            .basefont;
+            cursor: default;
+            height: 47px;
+            padding: 0 8px 5px 8px;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+/* appInterfaceVideo */
+.appInterfaceVideo {
+    .absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: -moz-box;
+    display: -webkit-box;
+    overflow: auto;
+    background: #000;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+/* linker */
+.linker {
+    overflow: hidden;
+}
+/* appInterfaceLink */
+.appInterfaceLink {
+    .absolute;
+    .basefont;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    height: 85%;
+    z-index: 10;
+    overflow: hidden;
+    background: #fff;
+    
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* functionBar */
+.functionBar {
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    z-index: 30;
+    display: none;
+    position: fixed;
+    background: @closeImg;
+}
+/* hover 动画 */
+@-webkit-keyframes detailup {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+    40% {
+        top: 0px;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@-webkit-keyframes detaildown {
+    0% {
+        top: 0px;
+    }
+    10% {
+        top: 80px;
+    }
+    90% {
+        top: 80px;
+        opacity: 1;
+    }
+    100% {
+        top: 80px;
+        opacity: 0;
+    }
+}
+.detailSliderUp {
+    -webkit-animation-name: detailup;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+}
+.detailSliderDown {
+    -webkit-animation-name: detaildown;
+    -webkit-animation-duration: 3.5s;
+    -webkit-animation-timing-function: ease-in-out;
+}
+/* 开机动画 */
+@-webkit-keyframes logined {
+    0% {
+        left: 300px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.logined {
+    -webkit-animation-name: logined;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-out;
+}

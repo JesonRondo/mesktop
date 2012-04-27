@@ -1,0 +1,16 @@
+{"appications":
+    [
+        {
+            "id": ,        // id(num)                                  text | video | music | img | linker
+            "type": ,      // App Type(text|video|music|img|linker)    text | video | music | img | linker
+            "size": ,      // display type(bigger|smaller)             text | video | music | img | linker
+            "src": ,       // App resource(link)                            | video | music | img | linker
+            "link": ,      // iframe href                                   |       |       |     | linker
+            "title": ,     // App title                                text | video | music |     | linker
+            "thumb": ,     // App icon(link)                                | video | music |     |
+            "content": ,   // App content                              text |       |       |     |
+            "subtitle": ,  // App subtitle                                  | video | music |     |
+            "direction": , // App icon show type(width|height)              | video | music | img | linker
+        }
+    ]
+}

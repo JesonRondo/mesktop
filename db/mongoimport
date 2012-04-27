@@ -1,0 +1,1 @@
+./mongoimport -h localhost -d mesktop -c apps --upsert --jsonArray /home/administrator/Dropbox/mesktop/webserver/db/apps.export.json

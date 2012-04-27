@@ -1,0 +1,19 @@
+{
+  "name": "mesktop",
+  "version": "0.0.1",
+  "description": "a web desktop",
+  "repository": "git@github.com:jiangrongyong/mesktop.git",
+  "author": "jiangrongyong<jiangrongyong@gmail.com>",
+  "main": "app.js",
+  "contributors": [ 
+    { "name": "jiangrongyong", "email": "jiangrongyong@gmail.com" },
+    { "name": "rondo", "email": "pancnlz@gmail.com" }
+  ],
+  "dependencies": {
+    "express": ">= 2.5.8",
+    "mongoose": ">= 2.5.7",
+    "ejs": ">= 0.6.1"
+  },
+  "keywords": ["desktop"],
+  "engines": { "node": ">= 0.6.5" }
+}

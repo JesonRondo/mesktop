@@ -1,0 +1,32 @@
+<table border="1px">
+    <% apps.forEach(function(app) { %>
+        <tr>
+            <td>
+                <p>
+                    <p><label>ts:</label><%= new Date(app.ts).toString() %></p>
+                    <p><label>type:</label><%= app.type %></p>
+                    <p><label>size:</label><%= app.size %></p>
+                    <p><label>src:</label><%= app.src %></p>
+                    <p><label>link:</label><%= app.link %></p>
+                    <p><label>title:</label><%= app.title %></p>
+                    <p><label>thumb:</label><%= app.thumb %></p>
+                    <p><label>content:</label><%= app.content %></p>
+                    <p><label>subtitle:</label><%= app.subtitle %></p>
+                    <p><label>direction:</label><%= app.direction %></p>
+                </p>
+            </td>
+            <td>
+                <form method='GET' action='/del'>
+                    <input type='submit' value='Delete' />
+                    <input type='hidden' name='id' value='<%=app._id %>'>
+                </form>
+                <br/>
+                <form method='GET' action='/edit'>
+                    <input type='submit' value='Edit' />
+                    <input type='hidden' name='id' value='<%=app._id %>'>
+                </form>
+            </td>
+        </tr>
+    <% }); %>
+</table>
+

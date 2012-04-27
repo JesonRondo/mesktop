@@ -1,0 +1,1 @@
+./mongoexport -h localhost -d mesktop -c apps --jsonArray -o ~/Dropbox/mesktop/webserver/db/apps.export.json

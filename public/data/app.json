@@ -1,0 +1,180 @@
+[
+    {
+        "id": 0,
+        "type": "text",
+        "size": "bigger",
+        "title": "咖啡馆",
+        "content": "几次悔过 掩埋狂妄的恶魔 感觉却好像毁弃善良的自我 几次脆弱 掩饰不甘的示弱 这就是我"
+    }, {
+        "id": 12,
+        "type": "img",
+        "size": "bigger",
+        "direction": "width",
+        "src": "images/app3.jpg"
+    }, {
+        "id": 2,
+        "type": "text",
+        "size": "smaller",
+        "title": "点点框计划",
+        "content": "一个框，或大，或小，但是都是一个有梦想的世界。点点愿意让你梦想成真。"
+    }, {
+        "id": 22,
+        "type": "video",
+        "size": "bigger",
+        "direction": "height",
+        "src": "http://lab.fftte.com/rondorepository/older.mp4",
+        "thumb": "video/older.jpg",
+        "title": "魔兽老了",
+        "subtitle": "我跟wow谈了一场注定没有结局的恋爱，虽然一开始就知道结果，但是分开以后，我依然祝她幸福！"
+    }, {
+        "id": 4,
+        "type": "text",
+        "size": "smaller",
+        "title": "我很好,你呢？",
+        "content": "用照片对话，Michelle Ellis 的唯美摄影作品。"
+    }, {
+        "id": 20,
+        "type": "music",
+        "size": "bigger",
+        "direction": "width",
+        "src": "music/SilverBreastplate.mp3",
+        "thumb": "music/SilverBreastplate.jpg",
+        "title": "银鳞胸甲",
+        "subtitle": "小德"
+    }, {
+        "id": 6,
+        "type": "text",
+        "size": "bigger",
+        "title": "Samsung Galaxy Note 评测",
+        "content": "还记得那部因为其 5 吋屏幕的巨大体积而被外间评价为一部定位不明的设备，最后落得个好坏参半收场的 Dell Streak 5 吗？</p><p>看来其突破和努力并不是毫无意义，因为事隔一年，在软硬件都开始成熟的今天，Samsung 为我们带来了大小相近的 Galaxy Note。</p><p>不同于 Streak 5，它有着一个鲜明而独特的定位 -- 全能的数码笔记本。到底这个定位和达 HK$5,998（台湾售 NT$23,900），大陆行货价格是 5,999 元人民币的定价（有部分地方短期促销价是 4,950 元），能否为 Galaxy Note 杀出一条血路？</p><p>最大卖点的 S-Pen 表现又是如何？在大家看过主站评测后，也跳转看看我们亲自做的评测吧！"
+    }, {
+        "id": 10,
+        "type": "img",
+        "size": "smaller",
+        "direction": "width",
+        "src": "images/app2.jpg"
+    }, {
+        "id": 23,
+        "type": "linker",
+        "size": "smaller",
+        "direction": "height",
+        "title": "淘宝网",
+        "link": "www.taobao.com",
+        "src": "images/taobao.png"
+    }, {
+        "id": 9,
+        "type": "img",
+        "size": "bigger",
+        "direction": "width",
+        "src": "images/app1.jpg"
+    }, {
+        "id": 14,
+        "type": "img",
+        "size": "smaller",
+        "direction": "width",
+        "src": "images/app10.jpg"
+    }, {
+        "id": 11,
+        "type": "img",
+        "size": "smaller",
+        "direction": "height",
+        "src": "images/app4.jpg"
+    }, {
+        "id": 3,
+        "type": "text",
+        "size": "bigger",
+        "title": "Nokia Lumia 800",
+        "content": "Orange，Joe Moody“这款手机是这里迄今为止最好的手机。我已经成功地在一周内让 15位消费者转而预订Lumia，我是如此地喜爱这款设备以至于在预订新手机时，迫不及待地想要得到一部，对于那些对苹果的iPhone或者三星的 Galaxy S 2感兴趣的用户，我打算设法说服他们转向Lumia。”"
+    }, {
+        "id": 13,
+        "type": "img",
+        "size": "smaller",
+        "direction": "width",
+        "src": "images/app11.jpg"
+    }, {
+        "id": 1,
+        "type": "text",
+        "size": "bigger",
+        "title": "The Expressive Web",
+        "content": "不久前，Adobe发布了一个展示HTML5和CSS3特性的网站项目：The Expressive Web"
+    }, {
+        "id": 16,
+        "type": "img",
+        "size": "smaller",
+        "direction": "width",
+        "src": "images/app6.jpg"
+    }, {
+        "id": 7,
+        "type": "text",
+        "size": "smaller",
+        "title": "昔の昔から",
+        "content": "ずっと 心にあるその人のことを，待っていた"
+    }, {
+        "id": 8,
+        "type": "text",
+        "size": "bigger",
+        "title": "上海田子坊 2010",
+        "content": "美翻的小园区，这里的小铺一定也是你有过的梦想吧"
+    }, {
+        "id": 19,
+        "type": "music",
+        "size": "smaller",
+        "direction": "height",
+        "src": "music/RainDrop.mp3",
+        "thumb": "music/RainDrop.jpg",
+        "title": "RainDrop",
+        "subtitle": "IU"
+    }, {
+        "id": 17,
+        "type": "img",
+        "size": "bigger",
+        "direction": "width",
+        "src": "images/app9.jpg"
+    }, {
+        "id": 18,
+        "type": "music",
+        "size": "smaller",
+        "direction": "height",
+        "src": "music/Dangerous.mp3",
+        "thumb": "music/Dangerous.jpg",
+        "title": "Dangerous",
+        "subtitle": "F(x)"
+    }, {
+        "id": 21,
+        "type": "video",
+        "size": "bigger",
+        "direction": "width",
+        "src": "http://lab.fftte.com/rondorepository/uandi.mp4",
+        "thumb": "video/uandi.jpg",
+        "title": "U & I",
+        "subtitle": "IU  Last Fantasy"
+    }, {
+        "id": 5,
+        "type": "text",
+        "size": "bigger",
+        "title": "Multi-column layout",
+        "content": "W3C offers a new way to arrange text “news-paper wise”, in columns. Multi-column layout is actually a module on its own. It allows a webdeveloper to let text be fitted into columns, in two ways: by defining a width for each column, or by defining a number of columns. The first would be done by column-width, the latter by column-count. To create a space between the columns, you need to specify a width for column-gap."
+    }, {
+        "id": 15,
+        "type": "img",
+        "size": "bigger",
+        "direction": "width",
+        "src": "images/app5.jpg"
+    }, {
+        "id": 24,
+        "type": "linker",
+        "size": "smaller",
+        "direction": "width",
+        "title": "金山软件",
+        "link": "www.kingsoft.com",
+        "src": "images/kingsoft.png"
+    }, {
+        "id": 25,
+        "type": "linker",
+        "size": "bigger",
+        "direction": "width",
+        "title": "Angry Birds",
+        "link": "chrome.angrybirds.com",
+        "src": "images/angry_birds.jpg"
+    }
+]

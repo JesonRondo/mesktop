@@ -1,0 +1,19 @@
+<form method='POST' action='<%= postpath %>'>
+    <% if (app) { %>
+        <input type='hidden' name='id' value='<%= app._id %>'>
+    <% } %>
+    <label>type:</label><input type='text' name='type' value='<%= app.type %>'/><br />
+    <label>size:</label><input type='text' name='size' value='<%= app.size %>'/><br />
+    <label>src:</label><input type='text' name='src' value='<%= app.src %>'/><br />
+    <label>link:</label><input type='text' name='link' value='<%= app.link %>'/><br />
+    <label>title:</label><input type='text' name='title' value='<%= app.title %>'/><br />
+    <label>thumb:</label><input type='text' name='thumb' value='<%= app.thumb %>'/><br />
+    <label>subtitle:</label><input type='text' name='subtitle' value='<%= app.subtitle %>'/><br />
+    <label>direction:</label><input type='text' name='direction' value='<%= app.direction %>'/><br />
+    <textarea rows=5 cols=40 name='content' >
+        <%=app.content%>
+    </textarea>
+    <br/>
+    <input type='submit' value='Submit' />
+</form>
+
