@@ -2,18 +2,116 @@
     <% if (app) { %>
         <input type='hidden' name='id' value='<%= app._id %>'>
     <% } %>
-    <label>type:</label><input type='text' name='type' value='<%= app.type %>'/><br />
-    <label>size:</label><input type='text' name='size' value='<%= app.size %>'/><br />
-    <label>src:</label><input type='text' name='src' value='<%= app.src %>'/><br />
-    <label>link:</label><input type='text' name='link' value='<%= app.link %>'/><br />
-    <label>title:</label><input type='text' name='title' value='<%= app.title %>'/><br />
-    <label>thumb:</label><input type='text' name='thumb' value='<%= app.thumb %>'/><br />
-    <label>subtitle:</label><input type='text' name='subtitle' value='<%= app.subtitle %>'/><br />
-    <label>direction:</label><input type='text' name='direction' value='<%= app.direction %>'/><br />
-    <textarea rows=5 cols=40 name='content' >
-        <%=app.content%>
-    </textarea>
-    <br/>
-    <input type='submit' value='Submit' />
+    <table class="table" id="addTable">
+        <tr>
+            <td class="span2"><label>type:</label></td>
+            <!--<td><input type='text' name='type' value='<%= app.type %>'/></td>-->
+            <td>
+                <select id="typeSelect" name="type">
+                    <option value="<%= app.type %>"><%= app.type %></option>
+                    <option value="text">text</option>
+                    <option value="img">img</option>
+                    <option value="video">video</option>
+                    <option value="music">music</option>
+                    <option value="linker">linker</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>size:</label></td>
+            <td><input type='text' name='size' value='<%= app.size %>'/></td>
+        </tr>
+        <tr>
+            <td><label>src:</label></td>
+            <td><input type='text' name='src' value='<%= app.src %>'/></td>
+        </tr>
+        <tr>
+            <td><label>link:</label></td>
+            <td><input type='text' name='link' value='<%= app.link %>'/></td>
+        </tr>
+        <tr>
+            <td><label>title:</label></td>
+            <td><input type='text' name='title' value='<%= app.title %>'/></td>
+        </tr>
+        <tr>
+            <td><label>thumb:</label></td>
+            <td><input type='text' name='thumb' value='<%= app.thumb %>'/></td>
+        </tr>
+        <tr>
+            <td><label>subtitle:</label></td>
+            <td><input type='text' name='subtitle' value='<%= app.subtitle %>'/></td>
+        </tr>
+        <tr>
+            <td><label>direction:</label></td>
+            <td><input type='text' name='direction' value='<%= app.direction %>'/></td>
+        </tr>
+        <tr>
+            <td><label>content:</label></td>
+            <td>
+                <textarea rows=5 cols=40 name='content' >
+                    <%=app.content%>
+                </textarea>
+            </td>
+        </tr>
+    </table>
+    <input type='submit' class="btn" value='Submit' />
 </form>
+<script type="text/javascript">
+    // init type 
+    var $addTable = $("#addTable");
+    var $typeSelect = $("#typeSelect");
 
+    var inithide = function() {
+        $addTable.find("tr").hide();
+        $addTable.find("tr:first").show();
+    }();
+
+    $typeSelect.bind("change", function() {
+        $addTable.find("tr").hide();
+        $addTable.find("tr:first").show();
+
+        var type = $typeSelect.val();
+        switch(type) {
+            case "text":
+                $addTable.find("tr:eq(1)").show();
+                $addTable.find("tr:eq(4)").show();
+                $addTable.find("tr:eq(8)").show();
+
+                break;
+            case "img":
+                $addTable.find("tr:eq(1)").show();
+                $addTable.find("tr:eq(2)").show();
+                $addTable.find("tr:eq(7)").show();
+
+                break;
+            case "video":
+                $addTable.find("tr:eq(1)").show();
+                $addTable.find("tr:eq(2)").show();
+                $addTable.find("tr:eq(4)").show();
+                $addTable.find("tr:eq(5)").show();
+                $addTable.find("tr:eq(6)").show();
+                $addTable.find("tr:eq(7)").show();
+
+                break;
+            case "music":
+                $addTable.find("tr:eq(1)").show();
+                $addTable.find("tr:eq(2)").show();
+                $addTable.find("tr:eq(4)").show();
+                $addTable.find("tr:eq(5)").show();
+                $addTable.find("tr:eq(6)").show();
+                $addTable.find("tr:eq(7)").show();
+                
+                break;
+            case "linker":
+                $addTable.find("tr:eq(1)").show();
+                $addTable.find("tr:eq(2)").show();
+                $addTable.find("tr:eq(3)").show();
+                $addTable.find("tr:eq(4)").show();
+                $addTable.find("tr:eq(7)").show();
+
+                break;
+            default:
+                break;
+        };
+    }).change();
+</script>

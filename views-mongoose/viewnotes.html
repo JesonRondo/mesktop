@@ -1,28 +1,35 @@
-<table border="1px">
+<table class="table">
     <% apps.forEach(function(app) { %>
         <tr>
             <td>
-                <p>
-                    <p><label>ts:</label><%= new Date(app.ts).toString() %></p>
-                    <p><label>type:</label><%= app.type %></p>
-                    <p><label>size:</label><%= app.size %></p>
-                    <p><label>src:</label><%= app.src %></p>
-                    <p><label>link:</label><%= app.link %></p>
-                    <p><label>title:</label><%= app.title %></p>
-                    <p><label>thumb:</label><%= app.thumb %></p>
-                    <p><label>content:</label><%= app.content %></p>
-                    <p><label>subtitle:</label><%= app.subtitle %></p>
-                    <p><label>direction:</label><%= app.direction %></p>
-                </p>
+                <label class="label" style="display:inline-block">ts:</label>
+                <p><%= new Date(app.ts).toString() %></p>
+                <label class="label" style="display:inline-block">type:</label>
+                <p><%= app.type %></p>
+                <label class="label" style="display:inline-block">size:</label>
+                <p><%= app.size %></p>
+                <label class="label" style="display:inline-block">src:</label>
+                <p><%= app.src %></p>
+                <label class="label" style="display:inline-block">link:</label>
+                <p><%= app.link %></p>
+                <label class="label" style="display:inline-block">title:</label>
+                <p><%= app.title %></p>
+                <label class="label" style="display:inline-block">thumb:</label>
+                <p><%= app.thumb %></p>
+                <label class="label" style="display:inline-block">content:</label>
+                <p><%= app.content %></p>
+                <label class="label" style="display:inline-block">subtitle:</label>
+                <p><%= app.subtitle %></p>
+                <label class="label" style="display:inline-block">direction:</label>
+                <p><%= app.direction %></p>
             </td>
-            <td>
-                <form method='GET' action='/del'>
-                    <input type='submit' value='Delete' />
+            <td class="span4">
+                <form method='GET' action='/edit' class="span2">
+                    <input type='submit' class="btn" value='Edit' />
                     <input type='hidden' name='id' value='<%=app._id %>'>
                 </form>
-                <br/>
-                <form method='GET' action='/edit'>
-                    <input type='submit' value='Edit' />
+                <form method='GET' action='/del' class="span2" onsubmit="return confirm('Are u sure?!!')">
+                    <input type='submit' class="btn btn-danger" value='Delete' />
                     <input type='hidden' name='id' value='<%=app._id %>'>
                 </form>
             </td>

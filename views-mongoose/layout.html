@@ -1,9 +1,15 @@
 <html>
-<head><title><%= title %></title></head>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-responsive.min.css" />
+
+    <script type="text/javascript" src="lib/jquery-1.6.4.min.js">></script>
+</head>
 <body>
-<h1><%= title %></h1>
-<p><a href='/view'>View</a> | <a href='/add'>Add</a></p>
-<%- body %>
+    <h1><%= title %></h1>
+    <p><a href='/view'>View</a> | <a href='/add'>Add</a></p>
+    <%- body %>
 </body>
-<html>
+</html>
 

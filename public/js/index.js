@@ -45,8 +45,8 @@ WebApp.os = (function() {
      */
     var initApp = function() {
         $.ajax({
-            //url: "/api/apps",
-            url: "../data/app.json",
+            url: "/api/apps",
+            //url: "../data/app.json",
             type: "GET",
             cache: false,
             dataType: "json",
@@ -222,9 +222,9 @@ WebApp.os = (function() {
                 $column.append(musicDiv);
 
                 $(".music").hover(function() {
-                    $(this).find(".musicDetail").removeClass("detailSliderDown").addClass("detailSliderUp").css("top", "0");
+                    $(this).find(".musicDetail").css("opacity", "1");
                 }, function() {
-                    $(this).find(".musicDetail").removeClass("detailSliderUp").addClass("detailSliderDown").css("top", "120px");
+                    $(this).find(".musicDetail").css("opacity", "0");
                 });
 
                 break;
@@ -240,9 +240,9 @@ WebApp.os = (function() {
                 $column.append(videoDiv);
 
                 $(".video").hover(function() {
-                    $(this).find(".videoDetail").removeClass("detailSliderDown").addClass("detailSliderUp").css("top", "0");
+                    $(this).find(".videoDetail").css("opacity", "1");
                 }, function() {
-                    $(this).find(".videoDetail").removeClass("detailSliderUp").addClass("detailSliderDown").css("top", "120px");
+                    $(this).find(".videoDetail").css("opacity", "0");
                 });
 
                 break;
@@ -284,11 +284,20 @@ WebApp.os = (function() {
     var initEffect = function() {
         var direction = 0;  // 正数表示向左，负数表示向右
     
+        // 启动界面
         $("#loginPage").bind("dblclick", function() {
             $(this).addClass("slideUp");
             
             // 启动
             startUp();
+        });
+
+        // 注销按钮
+        $("#logOff").bind("click", function() {
+            $("#loginPage").removeClass("slideUp");
+
+            // 注销
+            shutDown();
         });
     
         // 鼠标拖拽桌面
@@ -574,7 +583,10 @@ WebApp.os = (function() {
      * @description 启动界面
      */
     var startUp = function() {
-        $("#mainDesk").show().addClass("logined");
+        $("#mainDesk").show().removeClass().addClass("logined");
+    };
+    var shutDown = function() {
+        $("#mainDesk").removeClass().addClass("unlogin");
     };
     
     /**

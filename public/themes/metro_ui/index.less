@@ -82,6 +82,42 @@ html {
     padding: 50px 0 50px 150px;
     margin-top: -300px;
     
+    .userlog {
+        color: #ccc;
+        width: 90px;
+        height: 30px;
+        cursor: default;
+        background: #333;
+        position: fixed;
+        right: 30px;
+        top: 20px;
+        border-radius: 1px;
+        border: 1px #333 solid;
+        padding: 2px;
+        line-height: 30px;
+        -webkit-appearance: button;
+        -webkit-transition: background 0.5s ease-in-out;
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+
+        .userhead {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            overflow: hidden;
+            display: inline-block;
+            float: left;
+            
+            /* hack for head (temp) */
+            img {
+                margin-top: -6px;
+            }
+        }
+
+        &:hover {
+            background: #444;
+        }
+    }
+
     .column {
         float: left;
         width: 500px;
@@ -234,7 +270,7 @@ html {
     }
     .musicDetail {
         .absolute;
-        top: 120px;
+        top: 0;
         left: 0;
         color: #fff;
         height: 120px;
@@ -242,6 +278,8 @@ html {
         overflow: hidden;
         background: rgba(13, 140, 204, .4);
         text-shadow: 0 0 4px #000;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        opacity: 0;
         
         h2 {
             .basefont;
@@ -315,7 +353,7 @@ html {
     }
     .videoDetail {
         .absolute;
-        top: 120px;
+        top: 0;
         left: 0;
         color: #fff;
         height: 120px;
@@ -323,6 +361,8 @@ html {
         overflow: hidden;
         background: rgba(13, 140, 204, .4);
         text-shadow: 0 0 4px #000;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        opacity: 0;
         
         h2 {
             .basefont;
@@ -392,46 +432,6 @@ html {
     position: fixed;
     background: @closeImg;
 }
-/* hover 动画 */
-@-webkit-keyframes detailup {
-    0% {
-        top: 0px;
-        opacity: 0;
-    }
-    40% {
-        top: 0px;
-        opacity: 1;
-    }
-    100% {
-        top: 0px;
-    }
-}
-@-webkit-keyframes detaildown {
-    0% {
-        top: 0px;
-    }
-    10% {
-        top: 80px;
-    }
-    90% {
-        top: 80px;
-        opacity: 1;
-    }
-    100% {
-        top: 80px;
-        opacity: 0;
-    }
-}
-.detailSliderUp {
-    -webkit-animation-name: detailup;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in-out;
-}
-.detailSliderDown {
-    -webkit-animation-name: detaildown;
-    -webkit-animation-duration: 3.5s;
-    -webkit-animation-timing-function: ease-in-out;
-}
 /* 开机动画 */
 @-webkit-keyframes logined {
     0% {
@@ -444,6 +444,21 @@ html {
 }
 .logined {
     -webkit-animation-name: logined;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-out;
+}
+/* 注销动画 */
+@-webkit-keyframes unlogin {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        left: 600px;
+        opacity: 0;
+    }
+}
+.unlogin {
+    -webkit-animation-name: unlogin;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: ease-out;
 }
