@@ -2,8 +2,8 @@
   "name": "mesktop",
   "version": "0.0.1",
   "description": "a web desktop",
-  "repository": "git@github.com:jiangrongyong/mesktop.git",
-  "author": "jiangrongyong<jiangrongyong@gmail.com>",
+  "repository": "git@github.com:JesonRondo/mesktop.git",
+  "author": "LongZhou<pancnlz@gmail.com>",
   "main": "app.js",
   "contributors": [ 
     { "name": "jiangrongyong", "email": "jiangrongyong@gmail.com" },
