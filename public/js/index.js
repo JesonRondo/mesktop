@@ -105,8 +105,16 @@ WebApp.os = (function() {
                                 direction:  json[i].direction
                             };
                             break;
-                    }
-                }
+                    } // end switch
+                } // end for
+
+                // add Browser
+                var browser = {
+                    id:   "-1",
+                    type: "browser",
+                    size: "smaller"
+                };
+                $apps.appication.unshift(browser);
 
                 // 渲染界面
                 renderDesktop();
@@ -191,6 +199,13 @@ WebApp.os = (function() {
      */ 
     var creatIcon = function(ico, type, cls) {
         switch(type) {
+            // browser
+            case "browser":
+                var browser = $("<div>").addClass("app").addClass("browser").addClass(cls);
+                
+                $column.append(browser);
+
+                break;
             // text
             case "text":
                 var textDiv = $("<div>").addClass("app").addClass("text").addClass(cls);

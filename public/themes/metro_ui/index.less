@@ -39,7 +39,8 @@ html {
     font-family: "Segoe UI";
     background: @loginImg;
     z-index: 999999;
-    -webkit-transition: top 1s ease-out;
+    -webkit-transition: top 1.8s ease-out;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     
     &.slideUp {
         top: -900px;
@@ -106,6 +107,7 @@ html {
             overflow: hidden;
             display: inline-block;
             float: left;
+            box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
             
             /* hack for head (temp) */
             img {
@@ -144,6 +146,10 @@ html {
         width: 120px;
         height: 120px;
     }
+}
+/* browser */
+.browser {
+    background: #0d8ccc url(../../images/browser.png);
 }
 /* text */
 .text {
