@@ -430,6 +430,31 @@ WebApp.os = (function() {
      * @description 初始化程序打开事件
      */ 
     var initOpenEvent = function() {
+        // 浏览器
+        $(".browser").dblclick(function() {
+            // 显示关闭按钮
+            $("#close").fadeIn();    
+            // 浏览器面板
+            var browserBone = $("<div>").attr("class", "browserBone").hide();
+            var browserImage = $("<img>").attr("src", "images/browser.png");
+            var browserLoading = $("<div>").attr("class", "browserLoading")
+                                           .append(browserImage)
+                                           .append(browserBone);
+            var browserFace = $("<div>").attr("class", "appInterfaceBrowser")
+                                        .append(browserLoading);
+
+            $("body").append(browserFace);
+            // loading animate
+            setTimeout('$(".browserLoading").addClass("browserLoaded");', 1000);
+            setTimeout('$(".browserBone").fadeIn("normal")', 3500);
+
+            $("#close").live("click", function() {
+                setTimeout('$(".browserLoading").removeClass("browserLoaded");', 500);
+                setTimeout("$('.appInterfaceBrowser').remove();", 1500);
+                // 隐藏关闭按钮
+                $("#close").fadeOut();
+            });
+        });
         // 文章类型
         $(".text").dblclick(function() {
             // 显示关闭按钮
