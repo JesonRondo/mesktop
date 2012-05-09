@@ -440,7 +440,8 @@ WebApp.os = (function() {
                                          .attr("value", "about:blank")
                                          .attr("id", "address")
                                          .addClass("addressBar");
-            var pageIframe = $("<iframe>").attr("src", "http://www.kingsoft.com");
+            var pageIframe = $("<iframe>").attr("id", "browser")
+                                          .attr("src", "about:blank");
             var pageBone = $("<div>").addClass("pageBone")
                                      .append(pageIframe);
 
@@ -464,6 +465,20 @@ WebApp.os = (function() {
             // loading animate
             setTimeout('$(".browserLoading").addClass("browserLoaded");', 1000);
             setTimeout('$(".browserBone").fadeIn("normal")', 3500);
+
+            // browser event
+            $("#address").live("keydown", function(event) {
+                if (event.keyCode === 13) {
+                    var href = $("#address").val();
+                    // "http://"
+                    if (href.indexOf("http://") === -1) {
+                        href = "http://" + href;
+
+                        $("#address").val(href);
+                    }
+                    $("#browser").attr("src", href);
+                }
+            });
 
             $("#close").live("click", function() {
                 setTimeout('$(".browserLoading").removeClass("browserLoaded");', 500);
